@@ -12,7 +12,7 @@ import os
 import sys
 
 
-#ruta var externas entrada----------------------------------------
+#ruta variable externas entrada----------------------------------------
 file1 = '/home/Physics/work/1980_2014PRCP/princenton/reg22_-17.375_-66.125.txt'
 file2 = '/home/Physics/work/1980_2014PRCP/series_fill_reg/reg22_fill/CP2775_prcp.scv'
 #file3 = '/home/Physics/work/1980_2014PRCP/series_fill_reg/reg22_fill/S2548_prcp.scv'
@@ -25,14 +25,14 @@ f_int = '/home/Physics/work/1980_2014PRCP/series_fill_reg/reg22_fill/S2548_prcp.
 out =   '/home/Physics/work/1980_2014PRCP/series_fill_reg/reg22_fill/salida/'
 #-----------------------------------------------------------------
 
-#get name ref2------------------------------
+#obtener nombre ref2------------------------------
 base=os.path.basename(file2)
 os.path.splitext(base)
 nam_ref = str(os.path.splitext(base)[0])
 nam_ref = nam_ref[:-5]
 
 #---------------------------------------------------------------
-#get name file3
+#obtener nombre file3
 #base3=os.path.basename(file3)
 #os.path.splitext(base3)
 #nam_ref3 = str(os.path.splitext(base3)[0])
@@ -45,7 +45,7 @@ nam_ref = nam_ref[:-5]
 #nam_ref4 = nam_ref4[:-5]
 #---------------------------------------------------------------
 
-#get name f_int obj
+#obtener nombre f_int obj
 base1=os.path.basename(f_int)
 os.path.splitext(base1)
 nam_obj = str(os.path.splitext(base1)[0])
@@ -210,7 +210,7 @@ print('----------------Correlacion--------')
 print(np.corrcoef(y_true, y_predic))
 print('-----------------------------------')
 
-#PLOT RESULTADOS#---###---###----#################
+#PLOT RESULTS#---###---###----#################
 plt.figure(figsize=(9,4))
 plt.plot(df1.index,y_true, color = 'blue',label = 'Valores verdaderos', linewidth=0.4)
 plt.plot(df1.index,y_predic,label='Predichos DNN',color = 'red',linewidth=0.5)
